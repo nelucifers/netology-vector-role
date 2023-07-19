@@ -1,0 +1,5 @@
+---
+vector_version: "0.31.0"
+vector_dir: "/etc/vector"
+vector_data_dir: "/var/lib/vector"
+vector_tmp_dir: "/tmp/vector"
