@@ -12,11 +12,8 @@ User variables are located in (defaults/main.yml[defaults/main.yml])
 | Name | Default Value | Description |
 |------|---------------|-------------|
 | vector_version | 0.31.0 | Vector package version |
-|------|---------------|-------------|
 | vector_dir | /etc/vector | Path to directory with vector configuration |
-|------|---------------|-------------|
 | vector_data_dir | /var/lib/vector | Path to directory with vector data |
-|------|---------------|-------------|
 | vector_tmp_dir | /tmp/vector | Path to directory for temporary installation files |
 
 
