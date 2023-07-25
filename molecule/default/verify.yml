@@ -1,0 +1,26 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+
+  - name: Validate
+    become: true
+    ansible.builtin.command:
+      cmd: /usr/bin/vector validate /etc/vector/vector.toml
+    register: validate_result
+    changed_when: false
+
+  - name: Check validate
+    ansible.builtin.assert:
+      that:
+        - "'Validated' in validate_result.stdout"
+
+  - name: Get services
+    ansible.builtin.service_facts:
+
+  - name: Check service vector
+    ansible.builtin.assert:
+      that:
+        - ansible_facts.services['vector'].state == 'started'
+
